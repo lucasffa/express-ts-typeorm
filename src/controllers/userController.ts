@@ -29,6 +29,7 @@ export class UserController {
             res.status(200).send({ token });
         }
         catch (e) {
+            console.log("req: ", { req })
             res.status(500).send({ req })
         }
     };
