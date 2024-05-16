@@ -17,6 +17,7 @@ export class UserController {
     };
 
     login = async (req: Request, res: Response): Promise<void> => {
+        console.log("req: ", req.body)
         try {
             const { email, password } = req.body;
             const user = await this.userService.findByEmail(email);
